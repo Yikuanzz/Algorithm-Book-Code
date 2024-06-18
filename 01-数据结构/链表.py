@@ -1,5 +1,8 @@
 """
-    链表数数据结构之一，其中的数据呈线性排列。
+    链表数数据结构之一，其中的数据呈线性排列，特点是内存不连续。
+        - 单链表，最基本的链表形式。
+        - 循环链表，首尾相连，用来保存固定数量的数据。
+        - 双向链表，节点有前驱指针和后继指针。
 """
 
 
@@ -32,7 +35,9 @@ class linkList:
         self.size += 1
 
     def pop(self):
-        if not self.is_empty():
+        if self.is_empty():
+            raise Exception("LinkList is empty!")
+        else:
             tmp = self.head.next
             self.head.next = tmp.next
             self.size -= 1
@@ -42,6 +47,7 @@ class linkList:
 if __name__ == '__main__':
     colorLinkList = linkList()
     colors = ["Red", "Blue", "Yellow", "Green"]
+    # colorLinkList.pop()
     for t in colors:
         colorLinkList.push(t)
     colorLinkList.show_value()
