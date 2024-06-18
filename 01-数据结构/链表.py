@@ -18,7 +18,7 @@ class linkList:
         self.size = 0
 
     def is_empty(self):
-        return True if self.size == 0 else False
+        return self.size == 0
 
     def show_value(self):
         if not self.is_empty():

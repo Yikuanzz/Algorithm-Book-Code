@@ -14,11 +14,11 @@ class Stack:
 
     def is_empty(self):
         """ 判断栈是否为空 """
-        return True if self.index == -1 else False
+        return self.index == -1
 
     def is_full(self):
         """ 判断栈是否满 """
-        return True if self.index == self.size - 1 else False
+        return self.index == self.size - 1
 
     def push(self, value):
         """ 将元素入栈 """
@@ -64,7 +64,7 @@ class linkListStack:
 
     def is_empty(self):
         """ 判断栈是否为空 """
-        return True if self.size == 0 else False
+        return self.size == 0
 
     def push(self, value):
         """ 将元素入栈 """
